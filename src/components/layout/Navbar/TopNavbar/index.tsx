@@ -118,6 +118,7 @@ const TopNavbar = () => {
             placeholder="Search for products..."
             className="bg-transparent placeholder:text-black/40"
             aria-label="Search for products"
+            maxLength={100}
           />
         </InputGroup>
         <div className="flex items-center">
