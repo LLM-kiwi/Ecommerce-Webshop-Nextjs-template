@@ -13,6 +13,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
     <Link
       href={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`}
       className="flex flex-col items-start aspect-auto"
+      aria-label={`View details for ${data.title}, price $${calculateDiscountedPrice(data)} ${data.rating ? `, rated ${data.rating} out of 5 stars` : ""}`}
     >
       <div className="bg-[#F0EEED] rounded-[13px] lg:rounded-[20px] w-full lg:max-w-[295px] aspect-square mb-2.5 xl:mb-4 overflow-hidden">
         <Image
